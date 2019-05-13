@@ -13,13 +13,15 @@ WORKDIR $RAILS_ROOT
 
 #设置生产环境
 # Setting env up
-# ENV RAILS_ENV='production'
-# ENV RACK_ENV='production'
+ENV RAILS_ENV='production'
+ENV RACK_ENV='production'
 
 # Adding gems
 COPY Gemfile Gemfile
 COPY Gemfile.lock Gemfile.lock
 RUN bundle install
+# RUN rails assets:precompile
+# RUN rails db:migrate
 
 #Adding prodject file
 COPY . .
