@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.4'
 
+gem 'redis-rails', '~> 5.0', '>= 5.0.2'
+
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
