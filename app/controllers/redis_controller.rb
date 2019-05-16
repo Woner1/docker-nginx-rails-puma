@@ -1,6 +1,6 @@
 class RedisController < ApplicationController
   def index
-    Redis.current.set('zykey','hello aa')
+    Redis.current.set('zykey','hello ruby and aa')
   end
 
   def show
